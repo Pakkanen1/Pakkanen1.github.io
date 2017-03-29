@@ -13,3 +13,5 @@
 - 100 rivii javascriptii per äijä
 - AngularJS monipuolinen hyödyntäminen
 - Selkeää koodia ja kommentointia
+-adfgioadfhguidf
+-adsfasduifhasd
