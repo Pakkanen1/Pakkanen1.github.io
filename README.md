@@ -1,6 +1,8 @@
 "# JS_photobank"
 
+
 --- JS RYHMÄTYÖ ---
+
 
 -Kuvapankki
 -Vaadittava kirjasto: AngularJS
