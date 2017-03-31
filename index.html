@@ -12,7 +12,9 @@
 <link rel="stylesheet" type="text/css" href="css/tyylit.css">
 <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
 
-<script src="index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="search-engine.js"></script>
+<script src="admin-login.js"></script>
 
 <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -20,6 +22,7 @@
 
 </head>
 <body>
+
 <div id="fullpage">
 
 	<header role="banner">
@@ -27,20 +30,38 @@
 			<ul class="bignavi">
 			<li class="bignav-item"><a href="index.html">Etusivu</a></li>
 			<li class="bignav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
-			
+			</ul>
+			<ul class="mobnavi">
+			<li class="mobnav-item"><a href="index.html">Etusivu</a></li>
+			<li class="mobnav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
 			</ul>
 		</nav>
+		<input type="button" id="login-button" value="Kirjaudu Sisään" />
 	</header>
+
 	<div class="main-search">
 	<h1 id="main-header">Vulkanuksen Kuvapankki</h1>
-	<p>moi</p>
+	<p>Kuvahaku</p>
 
 	<form id="basic-search-form">
 	  <input type="text" name="search" id="basic-search" placeholder="Etsi kuvia...">
 	  <input type="button" id="search-button" value="Hae">
 	</form>
-	</div>
-</div>
-</body>
 
+	</div>
+
+	<div id="image-view">
+		<img src="images/flamehand.png"/>
+		<img src="images/ohnoes.png"/>
+	</div>
+
+<div id="login-window">
+	<form>
+		<input id="login-name" type="text" name="username" placeholder="Tunnus"/><br>
+		<input id="login-pass" type="text" type="password" name="password" placeholder="Salasana"/><br>
+		<input id="login-confirm" type="submit" value="Kirjaudu" />
+	</form>
+</div>
+
+</body>
 </html>

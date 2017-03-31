@@ -1,6 +1,15 @@
 /* Tällä keskitetään koko sivun sisältö */
 #fullpage { max-width: 63em; margin: auto;}
 
+body {
+  background-color: #d9ffcc;
+}
+
+li {
+	display: inline;
+	text-align: right;
+ }
+
 .navigation {
   /* Tärkeät tyylit; määrittää paikoituksen ja koon */
   width: 100%;
@@ -11,31 +20,44 @@
   bottom: 0;
   left: 0;
   z-index: 0;
-  
-  /* listan tyyli ja taustan väri */
-  list-style: none;
-  background: #111;
+}
+
+.mobnavi {
+ display: block;
+}
+
+.mobnav-item a {
+ display: inline-block;
+ padding: 0.4em;
+ background: black;
+ color: White;
+ font-size: 1em;
+ text-decoration: none;
+ transition: color 0.2s, background 0.5s;
+}
+
+.bignavi {
+  display: none;
 }
 
 h1, h2, h3, h4, ul, li {
 	font-weight: bold;
-	margin: 5px 0;
+	margin: 0px 0;
 	font-family: 'Montserrat', sans-serif;
 }
-
+/*headeriin kuuluu navigointi ja login-button*/
 header {
-	position: top;
+  padding: 0;
 	width: 100%;
 	text-align: left;
-	top: 0;
-	left: 0;
 	z-index: 5;
-	background-size: 5%;
-	background-color: #fff;
-	background-color: rgb(150,187,97);
+	background-color: #6d8f3d;
 }
 
-#main-header {font-size: 20px;}
+/*pääotsikko, "Vulkanuksen kuvapankki"*/
+#main-header {font-size: 20px; padding:0.2em;}
+
+#basic-search {width: 70%;}
 
 .main-search {
 	/*Hakulomakkeen div, muotoilua varten*/
@@ -44,5 +66,47 @@ header {
   background: #298;
   text-align: center;
   padding: 0.5em;
-	
+
+}
+
+/*kuvien listaus ja asettelu*/
+#image-view {
+  display: inline-block;
+  text-align: center;
+  margin: 1em;
+}
+#image-view img {
+    max-width: 50%;
+    padding: 3px;
+}
+
+/*login napin muotoilu ja asettelu*/
+#login-button {
+  position: absolute;
+  top: 2.5px;
+  right: 2px;
+  color: white;
+  background-color: #111;
+  border-color: #111;
+  font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.contact-info {
+  padding: 2em;
+}
+
+/*Login-ikkunan muotoilu ja asettelu. Oletuksena piilotettu,
+  mutta näkyvillä kehitystä varten*/
+#login-window {
+  position: absolute;
+  top: 30px;
+  right: 4px;
+  color: white;
+  background-color: #111;
+  padding: 1em;
+  border-style: solid;
+  border-width: medium;
+  border-color: red;
+  z-index: 999; /* Päälimmäiseks */
 }
