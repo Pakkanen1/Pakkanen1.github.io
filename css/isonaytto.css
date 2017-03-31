@@ -1,0 +1,31 @@
+@media screen and (min-width: 704px) {
+	
+#fullpage { max-width: 100%; margin: auto;}
+
+li {
+	display: inline;
+	text-align: right;
+ }
+
+/*Etusivun otsikko*/ 
+#main-header {font-size: 40px;}
+
+ .bignavi {
+	display: block;
+ }
+ 
+ .bignav-item {
+	width: 100px;
+ }
+ 
+ .bignav-item a {
+	display: inline-block;
+	padding: 0.7em;
+	background: black;
+	color: White;
+	font-size: 1.12em;
+	text-decoration: none;
+	transition: color 0.2s, background 0.5s;
+ }
+ 
+}
