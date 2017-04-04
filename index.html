@@ -12,9 +12,10 @@
 <link rel="stylesheet" type="text/css" href="css/tyylit.css">
 <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-<script src="search-engine.js"></script>
-<script src="admin-login.js"></script>
+<script src="js/search-engine.js"></script>
+<script src="js/admin-login.js"></script>
 
 <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -44,15 +45,15 @@
 	<p>Kuvahaku</p>
 
 	<form id="basic-search-form">
-	  <input type="text" name="search" id="basic-search" placeholder="Etsi kuvia...">
+	  <input type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
 	  <input type="button" id="search-button" value="Hae">
 	</form>
 
 	</div>
 
 	<div id="image-view">
-		<img src="images/flamehand.png"/>
-		<img src="images/ohnoes.PNG"/>
+		<img src="images/flamehand.png" alt="fire hand flame"/>
+		<img src="images/ohnoes.PNG" alt="vulcanus vulkanus god fire worried worry"/>
 	</div>
 
 <div id="login-window">
