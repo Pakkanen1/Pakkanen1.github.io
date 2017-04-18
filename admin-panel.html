@@ -23,7 +23,7 @@
 <![endif]-->
 
 </head>
-<body ng-controller="myCtrl">
+<body>
 
 <div id="fullpage">
 
@@ -50,7 +50,7 @@
 		  <input type="button" id="search-button" value="Hae">
 		</form>
 	</div>
-		
+
 	<div id="image-view">
 		<img src="images/flamehand.png" alt="fire hand flame"/>
 		<img src="images/ohnoes.PNG" alt="vulcanus vulkanus god fire worried worry"/>
@@ -64,11 +64,11 @@
 	</form>
 </div>
 
-<div class="file-upload">
-        <input type="text" ng-model="name">
-        <input type="file" file-model="myFile"/>
-        <button ng-click="uploadFile()">upload me</button>
-    </div>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
 
 </body>
 </html>
