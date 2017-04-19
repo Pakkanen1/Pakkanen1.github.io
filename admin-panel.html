@@ -60,11 +60,11 @@
 </div>
 
 <div id="previewcontrol" ng-controller="ImgHandler">
-		<img id="preimage" ng-src="{{preImg}}" alt="preview image"/>
+		<img id="preimage" src="" alt="preview image" />
 
 	<form action="upload.php" method="post" enctype="multipart/form-data">
 	    Select image to upload:
-	    <input ng-model="form.image" type="file" name="fileToUpload" id="fileToUpload">
+	    <input type="file" name="fileToUpload" id="fileToUpload">
 	    <input type="submit" value="Upload Image" name="submit">
 	</form>
 </div>
