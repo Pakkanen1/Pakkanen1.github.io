@@ -7,16 +7,14 @@
 
 <meta name="description" content="">
 <meta name="author" content="SitePoint">
-
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/tyylit.css">
 <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
-<link rel="stylesheet" type="text/css" href="css/testi.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-<script src="js/admin-login.js"></script>
-<script src="js/menubutton.js"></script>
+
+<script src="js/testiyhteystiedot.js"></script>
+
 <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 <![endif]-->
@@ -24,28 +22,21 @@
 </head>
 <body>
 <header role="banner">
-
 <div id="fullpage">
-			<div id="login-window" hidden>
-				<form id="login">
-				<input class="loginText" type="text" name="username" placeholder="Tunnus"/><br>
-					<input class="loginText" type="password" name="password" placeholder="Salasana"/><br>
-					<input class="loginText" type="submit" value="Kirjaudu" />
-				</form>
-				</div>
-				
-				
-				
+
+	
+	
 <div class="dropdown">
-<button onclick="menuFunction()" class="dropbtn">Menu</button>
-  <div id="menuDropdown" class="dropdown-content">
+<button onclick="myFunction()" class="dropbtn">Menu</button>
+  <div id="myDropdown" class="dropdown-content">
     <a href="index.html">Etusivu</a>
     <a href="yhteystiedot.html">Yhteystiedot</a>
-    <a href="admin-panel.html">Admin</a>
+    <a href="#contact">Contact</a>
   </div>
 </div>
-<input type="button" id="loginButton" value="Kirjaudu" />
 </header>
+		<input type="button" id="login-button" value="Kirjaudu Sisään" />
+	
 
 	<div class="main-search">
 	<h1 id="main-header">Yhteystiedot</h1>
@@ -55,10 +46,15 @@
     puh. 123-BIG-ANA<br>
     EMAIL
   <p>
-  
-  
-  
-  
 </div>
+
+<div id="login-window">
+	<form>
+		<input id="login-name" type="text" name="username" placeholder="Tunnus"/><br>
+		<input id="login-pass" type="text" type="password" name="password" placeholder="Salasana"/><br>
+		<input id="login-confirm" type="submit" value="Kirjaudu" />
+	</form>
+</div>
+
 </body>
 </html>
