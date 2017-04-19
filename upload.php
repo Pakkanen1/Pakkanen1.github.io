@@ -42,4 +42,7 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+echo "<script>
+  window.location.href='http://localhost/ap/Pakkanen1.github.io/admin-panel.html';
+      </script>"
 ?>
