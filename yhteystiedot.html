@@ -39,27 +39,17 @@
 	<div class="main-search">
 	<h1 id="main-header">Yhteystiedot</h1>
   </div>
-  <div class="main-search" id="contact-info" ng-controller="InfoView">
-	<button  ng-click="show = 1">Teemu Ruonti</button>
-	<button  ng-click="show = 2">Antti Pakkanen</button>
-	<button  ng-click="show = 3">Arttu Seppä-Lassila</button>
-	<button  ng-click="show = 4">Ilari Nikander</button>
-
-    <div class="form-group" ng-show="show==1" >
-       <br><p>Nimi: {{contacts[0].name}} | Puhelin: {{contacts[0].phone}} | S-posti: {{contacts[0].email}}</p>
-    </div>
-
-    <div class="form-group" ng-show="show==2" >
-       <br><p>Nimi: {{contacts[1].name}} | Puhelin: {{contacts[1].phone}} | S-posti: {{contacts[1].email}}</p>
-    </div>
-
-    <div class="form-group" ng-show="show==3" >
-       <br><p>Nimi: {{contacts[2].name}} | Puhelin: {{contacts[2].phone}} | S-posti: {{contacts[2].email}}</p>
-    </div>
-
-    <div class="form-group" ng-show="show==4" >
-       <br><p>Nimi: {{contacts[3].name}} | Puhelin: {{contacts[3].phone}} | S-posti: {{contacts[3].email}}</p>
-    </div>
+  <div class="contact-info" id="contact-info" ng-controller="InfoView">
+	<button class="mobnav-item" id="teemu">Teemu Ruonti</button>
+	<button class="mobnav-item" id="antti">Antti Pakkanen</button>
+	<button class="mobnav-item" id="arttu">Arttu Seppä-Lassila</button>
+	<button class="mobnav-item" id="ilari">Ilari Nikander</button>
+	
+    <p id="hlö" class="teemu">{{contacts[0].name}}<br>{{contacts[0].phone}}<br>{{contacts[0].email}}</p>
+	<p id="hlö" class="antti">{{contacts[1].name}}<br>{{contacts[1].phone}}<br>{{contacts[1].email}}</p>
+	<p id="hlö" class="arttu">{{contacts[2].name}}<br>{{contacts[2].phone}}<br>{{contacts[2].email}}</p>
+	<p id="hlö" class="ilari">{{contacts[3].name}}<br>{{contacts[3].phone}}<br>{{contacts[3].email}}</p>
+	
   </div>
 </div>
 
