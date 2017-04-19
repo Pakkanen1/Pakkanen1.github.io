@@ -40,3 +40,8 @@ mainApp.controller('ImageView', function ($scope, $http) {
     $scope.getImg();
 
 }); // Controller loppuu
+
+// Etusivun hakupalkin controller
+mainApp.controller('mainSearch', function($scope) {
+	$scope.basicSearch = "";
+});
