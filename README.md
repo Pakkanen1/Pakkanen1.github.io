@@ -9,6 +9,7 @@
 - Git + GitHUB
   - Omat branchit
 - Trello
+  - https://trello.com/b/DMcLtM9X/liekki-kammen
 
 - 100 rivii javascriptii per äijä
 - AngularJS monipuolinen hyödyntäminen
