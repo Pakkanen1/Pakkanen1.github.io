@@ -14,7 +14,7 @@ adminApp.controller('ImgHandler', function($scope) {
         // Hae ladattu kuva ja aseta se HTML-sivulle
         document.getElementById("preimage").src = e.target.result;
         // Stailataan preview-kuvan leveys
-        document.getElementById("preimage").style = "width: 50%";
+        document.getElementById("preimage").style = "width: 200px";
     };
 
     // Luetaan kuvatiedosto tiedostopolun kautta.
@@ -22,5 +22,7 @@ adminApp.controller('ImgHandler', function($scope) {
 
     console.log(this.files[0]);
   };
+
+  $scope.imgDesc = "";
 
 });
