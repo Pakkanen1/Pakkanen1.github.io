@@ -31,14 +31,15 @@
 				</nav>
 				<input type="button" id="login-button" value="Kirjaudu Sisään" />
 			</header>
-			<div class="main-search">
+			<div ng-controller="mainSearch" class="main-search">
 					<h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
 					<p>Kuvahaku</p>
 
 					<form id="basic-search-form">
-					  <input type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
+					  <input ng-model="basicSearch" type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
 					  <input type="button" id="search-button" value="Hae">
 					</form>
+					<p>{{basicSearch}}</p>
 			</div>
 
 	<div id="image-gallery" ng-controller="ImageView">
