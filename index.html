@@ -28,21 +28,23 @@
   </div>
 </div>
 <input type="button" id="loginButton" value="Kirjaudu" />
-	</header>
+</header>
 
+	<div class="main-search">
 
-			<div class="main-search">
-	<div id="fullpage">
-			<div ng-controller="mainSearch" class="main-search">
-					<h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
-					<p>Kuvahaku</p>
+			 <div ng-controller="mainSearch" class="main-search">
+					 <h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
+					 <p>Kuvahaku</p>
 
-					<form id="basic-search-form">
-					  <input ng-model="basicSearch" type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
-					  <input type="button" id="search-button" value="Hae">
-					</form>
-					<p>{{basicSearch}}</p>
-			</div>
+					 <form id="basic-search-form">
+						 <input ng-model="basicSearch" type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
+						 <input type="button" id="search-button" value="Hae">
+					 </form>
+					 <p>{{basicSearch}}</p>
+			 </div>
+	 </div>
+
+<div id="fullpage">
 
 	<div id="image-gallery" ng-controller="ImageView">
 		<h3>{{currentImage.filename}}</h3>
@@ -67,13 +69,7 @@
 					<input class="loginText" type="submit" value="Kirjaudu" />
 				</form>
 				</div>
-
-
-
-
-
-
-
+				
 	</div>
  </div>
 </body>
