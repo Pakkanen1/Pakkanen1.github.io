@@ -7,7 +7,7 @@
 - Kuvapankki
 - Vaadittava kirjasto: AngularJS
 - Git + GitHUB
-  - Omat branchit
+  - Omat branchit/forkit
 - Trello
   - https://trello.com/b/DMcLtM9X/liekki-kammen
 
