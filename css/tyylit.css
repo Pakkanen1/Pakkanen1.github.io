@@ -26,7 +26,7 @@ li {
  display: block;
 }
 
-.mobnav-item a {
+.mobnav-item a, button{
  display: inline-block;
  padding: 0.4em;
  background: black;
@@ -84,7 +84,16 @@ header {
 
 
 .contact-info {
-  padding: 2em;
+  background: #d9ffcc;
+  text-align: center;
+  padding: 1em;
+  font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#hlö {
+	position: center;
+	padding: 0.8em;
 }
 
 /*Login-ikkunan muotoilu ja asettelu. Oletuksena piilotettu,
