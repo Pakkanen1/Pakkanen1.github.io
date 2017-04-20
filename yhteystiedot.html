@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
 <script src="js/admin-login.js"></script>
 <script type="text/javascript" src="js/yhteystiedot.js"></script>
 
@@ -33,7 +34,9 @@
 			<li class="mobnav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
 			</ul>
 		</nav>
-		<input type="button" id="login-button" value="Kirjaudu Sisään" />
+		<form action="loginform.html">
+			<input type="submit" id="login-button" value="Kirjaudu sisään" />
+		</form>
 	</header>
 
 	<div class="main-search">
@@ -51,14 +54,6 @@
 	<p id="hlö" class="ilari">{{contacts[3].name}}<br>{{contacts[3].phone}}<br>{{contacts[3].email}}</p>
 	
   </div>
-</div>
-
-<div id="login-window">
-	<form>
-		<input id="login-name" type="text" name="username" placeholder="Tunnus"/><br>
-		<input id="login-pass" type="text" type="password" name="password" placeholder="Salasana"/><br>
-		<input id="login-confirm" type="submit" value="Kirjaudu" />
-	</form>
 </div>
 
 </body>

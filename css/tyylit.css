@@ -105,17 +105,22 @@ header {
 	padding: 0.8em;
 }
 
+.login-page {
+  background: #d9ffcc;
+  text-align: center;
+  padding: 1em;
+  font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+}
+
 /*Login-ikkunan muotoilu ja asettelu. Oletuksena piilotettu,
   mutta näkyvillä kehitystä varten*/
 #login-window {
   position: absolute;
-  top: 30px;
-  right: 4px;
+  top: 40%;
+  right: 50%;
   color: white;
   background-color: #111;
   padding: 1em;
-  border-style: solid;
-  border-width: medium;
-  border-color: red;
   z-index: 999; /* Päälimmäiseks */
 }
