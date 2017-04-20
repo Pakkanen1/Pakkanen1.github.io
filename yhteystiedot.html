@@ -1,26 +1,24 @@
 <!DOCTYPE HTML>
 <html lang="fi">
 <head>
-
 <meta charset="utf-8">
-<title>Yhteystiedot, Vulkanus</title>
-
-<meta name="description" content="">
-<meta name="author" content="SitePoint">
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/tyylit.css">
 <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-<script src="admin-login.js"></script>
+<script src="js/admin-login.js"></script>
+<script type="text/javascript" src="js/yhteystiedot.js"></script>
+
+<title>Yhteystiedot, Vulkanus</title>
 
 <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 <![endif]-->
 
 </head>
-<body>
+<body ng-app="yTiedot">
 
 <div id="fullpage">
 
@@ -41,11 +39,18 @@
 	<div class="main-search">
 	<h1 id="main-header">Yhteystiedot</h1>
   </div>
-  <p class="contact-info">
-    <b>Antti Pakkanen</b><br>
-    puh. 123-BIG-ANA<br>
-    EMAIL
-  <p>
+  <div class="contact-info" id="contact-info" ng-controller="InfoView">
+	<button class="mobnav-item" id="teemu">Teemu Ruonti</button>
+	<button class="mobnav-item" id="antti">Antti Pakkanen</button>
+	<button class="mobnav-item" id="arttu">Arttu Seppä-Lassila</button>
+	<button class="mobnav-item" id="ilari">Ilari Nikander</button>
+
+    <p id="hlö" class="teemu">{{contacts[0].name}}<br>{{contacts[0].phone}}<br>{{contacts[0].email}}</p>
+	<p id="hlö" class="antti">{{contacts[1].name}}<br>{{contacts[1].phone}}<br>{{contacts[1].email}}</p>
+	<p id="hlö" class="arttu">{{contacts[2].name}}<br>{{contacts[2].phone}}<br>{{contacts[2].email}}</p>
+	<p id="hlö" class="ilari">{{contacts[3].name}}<br>{{contacts[3].phone}}<br>{{contacts[3].email}}</p>
+
+  </div>
 </div>
 
 <div id="login-window">
