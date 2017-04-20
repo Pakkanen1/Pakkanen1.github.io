@@ -5,16 +5,33 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/tyylit.css">
     <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
+	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 		<script src="js/search-engine.js"></script>
 		<script src="js/admin-login.js"></script>
+		<script src="js/menubutton.js"></script>
     <script type="text/javascript" src="js/imageappender.js"></script>
 
     <title>Vulkanuksen Kuvagalleria</title>
 </head>
 
 <body ng-app="mainApp">
+<header role="banner">
+<div id="fullpage">
+<div class="dropdown">
+<button onclick="menuFunction()" class="dropbtn">Menu</button>
+  <div id="menuDropdown" class="dropdown-content">
+    <a href="index.html">Etusivu</a>
+    <a href="yhteystiedot.html">Yhteystiedot</a>
+    <a href="admin-panel.html">Admin</a>
+  </div>
+</div>
+<input type="button" id="loginButton" value="Kirjaudu" />
+	</header>
+				
+			
+			<div class="main-search">
 	<div id="fullpage">
 		<header role="banner">
 				<nav role="navigation">
@@ -57,13 +74,19 @@
 	        </ul>
 	    </div>
 
-			<div id="login-window">
-				<form>
-					<input id="login-name" type="text" name="username" placeholder="Tunnus"/><br>
-					<input id="login-pass" type="password" name="password" placeholder="Salasana"/><br>
-					<input id="login-confirm" type="submit" value="Kirjaudu" />
+
+			<div id="login-window" hidden>
+				<form id="login">
+				<input class="loginText" type="text" name="username" placeholder="Tunnus"/><br>
+					<input class="loginText" type="password" name="password" placeholder="Salasana"/><br>
+					<input class="loginText" type="submit" value="Kirjaudu" />
 				</form>
-			</div>
+				</div>
+				
+				
+				
+		
+			
 
 
 	</div>
