@@ -8,17 +8,19 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+		<script type="text/javascript" src="js/imageappender.js"></script>
 		<script src="js/search-engine.js"></script>
 		<script src="js/admin-login.js"></script>
 		<script src="js/menubutton.js"></script>
-    <script type="text/javascript" src="js/imageappender.js"></script>
+
 
     <title>Vulkanuksen Kuvagalleria</title>
 </head>
 
 <body ng-app="mainApp">
+
 <header role="banner">
-<div id="fullpage">
 <div class="dropdown">
 <button onclick="menuFunction()" class="dropbtn">Menu</button>
   <div id="menuDropdown" class="dropdown-content">
@@ -29,6 +31,7 @@
 </div>
 <input type="button" id="loginButton" value="Kirjaudu" />
 </header>
+<div id="fullpage">
 
 	<div class="main-search">
 
@@ -44,23 +47,21 @@
 			 </div>
 	 </div>
 
-<div id="fullpage">
-
 	<div id="image-gallery" ng-controller="ImageView">
 		<h3>{{currentImage.filename}}</h3>
-	    <div id="current-image">
+	    <div id="current-image" class="currentimage">
 	        <img ng-src="{{currentImage.image}}" alt="{{currentImage.description}}">
 	    </div>
 	    <div id="thumnails">
 	        <ul id="thumbnail-list">
 						<!--Klikatessa thumbnailia ajetaan setCurrentImage() @ imageappender.js
 								ng-repeat toistaa <li>-elementin jokaiselle kuvalle images-taulukossa -->
-	            <li ng-repeat="image in images" ng-click="setCurrentImage(image)">
-	                <img ng-src="{{image.image}}" alt="{{image.description}}" style="width: 150px; height: 150px;">
+	            <li class="repeatedthumbnail" ng-repeat="image in images" ng-click="setCurrentImage(image)">
+	                <img ng-src="{{image.image}}" alt="{{image.description}}" />
 	            </li>
 	        </ul>
 	    </div>
-
+		</div>
 
 			<div id="login-window" hidden>
 				<form id="login">
@@ -68,9 +69,9 @@
 					<input class="loginText" type="password" name="password" placeholder="Salasana"/><br>
 					<input class="loginText" type="submit" value="Kirjaudu" />
 				</form>
-				</div>
-				
-	</div>
+			</div>
+
+
  </div>
 </body>
 </html>

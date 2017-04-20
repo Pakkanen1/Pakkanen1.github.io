@@ -1,5 +1,5 @@
 /* Tällä keskitetään koko sivun sisältö */
-#fullpage { max-width: 63em; margin: auto;}
+#fullpage { max-width: 63em; margin: 0 auto;}
 
 body {
   background-color: #d9ffcc;
@@ -67,17 +67,6 @@ header {
   text-align: center;
   padding: 0.5em 0em;
 
-}
-
-/*kuvien listaus ja asettelu*/
-#image-view {
-  display: inline-block;
-  text-align: center;
-  margin: 1em;
-}
-#image-view img {
-    max-width: 50%;
-    padding: 3px;
 }
 
 /*login napin muotoilu ja asettelu*/
@@ -150,7 +139,12 @@ header {
     display: block;
 }
 
-.dropdown a:hover {background-color: #e02908; color:white; font-family: Arial, Helvetica, sans-serif; font-weight: bold;}
+.dropdown a:hover {
+  background-color: #e02908;
+   color:white;
+   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
 
 .show {display:block;}
 #loginButton{
@@ -168,4 +162,28 @@ header {
   border-width: medium;
   border-color: red;
   z-index: 999; /* Päälimmäiseks */
+}
+
+#image-gallery {
+  text-align: center;
+}
+
+.repeatedthumbnail {
+  cursor: pointer;
+}
+
+.repeatedthumbnail img {
+  padding: 1em;
+  width: 150px;
+  height: 150px;
+}
+
+.currentimage {
+  text-align: center;
+  cursor: pointer;
+}
+
+.currentimage img {
+  padding: 2em;
+  max-width: 80%;
 }
