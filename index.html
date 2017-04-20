@@ -5,68 +5,73 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/tyylit.css">
     <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+		<script type="text/javascript" src="js/imageappender.js"></script>
 		<script src="js/search-engine.js"></script>
 		<script src="js/admin-login.js"></script>
-    <script type="text/javascript" src="js/imageappender.js"></script>
+		<script src="js/menubutton.js"></script>
+
 
     <title>Vulkanuksen Kuvagalleria</title>
 </head>
 
 <body ng-app="mainApp">
-	<div id="fullpage">
-		<header role="banner">
-				<nav role="navigation">
-					<ul class="bignavi">
-					<li class="bignav-item"><a href="index.html">Etusivu</a></li>
-					<li class="bignav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
-					<li class="bignav-item"><a href="admin-panel.html">Admin</a></li>
-					</ul>
-					<ul class="mobnavi">
-					<li class="mobnav-item"><a href="index.html">Etusivu</a></li>
-					<li class="mobnav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
-					<li class="bignav-item"><a href="admin-panel.html">Admin</a></li>
-					</ul>
-				</nav>
-				<input type="button" id="login-button" value="Kirjaudu Sisään" />
-			</header>
-			<div ng-controller="mainSearch" class="main-search">
-					<h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
-					<p>Kuvahaku</p>
 
-					<form id="basic-search-form">
-					  <input ng-model="basicSearch" type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
-					  <input type="button" id="search-button" value="Hae">
-					</form>
-					<p>{{basicSearch}}</p>
-			</div>
+<header role="banner">
+<div class="dropdown">
+<button onclick="menuFunction()" class="dropbtn">Menu</button>
+  <div id="menuDropdown" class="dropdown-content">
+    <a href="index.html">Etusivu</a>
+    <a href="yhteystiedot.html">Yhteystiedot</a>
+    <a href="admin-panel.html">Admin</a>
+  </div>
+</div>
+<input type="button" id="loginButton" value="Kirjaudu" />
+</header>
+<div id="fullpage">
+
+	<div class="main-search">
+
+			 <div ng-controller="mainSearch" class="main-search">
+					 <h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
+					 <p>Kuvahaku</p>
+
+					 <form id="basic-search-form">
+						 <input ng-model="basicSearch" type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
+						 <input type="button" id="search-button" value="Hae">
+					 </form>
+					 <p>{{basicSearch}}</p>
+			 </div>
+	 </div>
 
 	<div id="image-gallery" ng-controller="ImageView">
 		<h3>{{currentImage.filename}}</h3>
-	    <div id="current-image">
+	    <div id="current-image" class="currentimage">
 	        <img ng-src="{{currentImage.image}}" alt="{{currentImage.description}}">
 	    </div>
 	    <div id="thumnails">
 	        <ul id="thumbnail-list">
 						<!--Klikatessa thumbnailia ajetaan setCurrentImage() @ imageappender.js
 								ng-repeat toistaa <li>-elementin jokaiselle kuvalle images-taulukossa -->
-	            <li ng-repeat="image in images" ng-click="setCurrentImage(image)">
-	                <img ng-src="{{image.image}}" alt="{{image.description}}" style="width: 150px; height: 150px;">
+	            <li class="repeatedthumbnail" ng-repeat="image in images" ng-click="setCurrentImage(image)">
+	                <img ng-src="{{image.image}}" alt="{{image.description}}" />
 	            </li>
 	        </ul>
 	    </div>
+		</div>
 
-			<div id="login-window">
-				<form>
-					<input id="login-name" type="text" name="username" placeholder="Tunnus"/><br>
-					<input id="login-pass" type="password" name="password" placeholder="Salasana"/><br>
-					<input id="login-confirm" type="submit" value="Kirjaudu" />
+			<div id="login-window" hidden>
+				<form id="login">
+				<input class="loginText" type="text" name="username" placeholder="Tunnus"/><br>
+					<input class="loginText" type="password" name="password" placeholder="Salasana"/><br>
+					<input class="loginText" type="submit" value="Kirjaudu" />
 				</form>
 			</div>
 
 
-	</div>
  </div>
 </body>
 </html>
