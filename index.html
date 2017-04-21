@@ -11,15 +11,14 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
 
-		<script type="text/javascript" src="js/imageappender.js"></script>
+    <script type="text/javascript" src="js/imageappender.js"></script>
 		<script src="js/search-engine.js"></script>
 		<script src="js/admin-login.js"></script>
 		<script src="js/menubutton.js"></script>
 
-
-    <title>Vulkanuksen Kuvagalleria</title>
+  <title>Vulkanuksen Kuvagalleria</title>
 </head>
-
+  
 <body ng-app="mainApp" ng-cloak>
 
 <header role="banner">
@@ -36,30 +35,19 @@
 </header>
 <div id="fullpage">
 
-	<div class="main-search">
-
-		<div ng-controller="ImageSearch">
-			<h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
-			<p>Kuvahaku</p>
-
-			<input ng-model="query.description" placeholder="Etsi kuvia">
-			<ul ng-show="query">
-			 	<li ng-repeat="image in images | filter:query">{{image.description}}</li>
-			</ul>
+	<div id="image-gallery" ng-controller="ImageView">
+		<h1>Kuvahaku</h1>
+		<div id="searchInput"><input ng-model="query.description" placeholder="Etsi kuvia">
 		</div>
 
-	 </div>
-
-	<div id="image-gallery" ng-controller="ImageView">
-		<h3>{{currentImage.filename}}</h3>
 	    <div id="current-image" class="currentimage">
 	        <img ng-src="{{currentImage.image}}" alt="{{currentImage.description}}">
 	    </div>
 	    <div id="thumnails">
-	        <ul id="thumbnail-list">
+	        <ul id="thumbnail-list" ng-show="query">
 						<!--Klikatessa thumbnailia ajetaan setCurrentImage() @ imageappender.js
 								ng-repeat toistaa <li>-elementin jokaiselle kuvalle images-taulukossa -->
-	            <li class="repeatedthumbnail" ng-repeat="image in images" ng-click="setCurrentImage(image)">
+	            <li class="repeatedthumbnail" ng-repeat="image in images | filter:query" ng-click="setCurrentImage(image)">
 	                <img ng-src="{{image.image}}" alt="{{image.description}}" />
 	            </li>
 	        </ul>
