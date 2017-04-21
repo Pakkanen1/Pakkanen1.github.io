@@ -36,8 +36,10 @@
 <div id="fullpage">
 
 	<div id="image-gallery" ng-controller="ImageView">
-		<h1>Kuvahaku</h1>
-		<div id="searchInput"><input ng-model="query.description" placeholder="Etsi kuvia">
+
+		<div id="searchInput">
+			<h1>Kuvahaku</h1>
+			<input id="search" ng-model="query.description" placeholder="Etsi kuvia">
 		</div>
 
 	    <div id="current-image" class="currentimage">
