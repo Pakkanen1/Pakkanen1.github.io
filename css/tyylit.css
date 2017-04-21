@@ -11,36 +11,6 @@ li {
 	text-align: right;
  }
 
-.navigation {
-  /* Tärkeät tyylit; määrittää paikoituksen ja koon */
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 37;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.mobnavi {
- display: block;
-}
-
-.mobnav-item a, button{
- display: inline-block;
- padding: 0.4em;
- background: black;
- color: White;
- font-size: 1em;
- text-decoration: none;
- transition: color 0.2s, background 0.5s;
-}
-
-.bignavi {
-  display: none;
-}
-
 h1, h2, h3, h4, ul, li {
 	font-weight: bold;
 	margin: 0px 0;
@@ -58,6 +28,17 @@ header {
 /*pääotsikko, "Vulkanuksen kuvapankki"*/
 #main-header {font-size: 20px; padding:0.2em;}
 
+#login-header {font-size: 17px; padding:0.2em;}
+
+.login-bg {
+	/*Hakulomakkeen div, muotoilua varten*/
+  width: 100%;
+  height: 100%;
+  background: white;
+  text-align: center;
+  padding: 0.5em 0em;
+}
+
 #basic-search {width: 70%;}
 
 .main-search {
@@ -71,7 +52,6 @@ header {
 }
 
 /*login napin muotoilu ja asettelu*/
-
 
 .contact-info {
   background: #d9ffcc;
@@ -110,6 +90,7 @@ header {
   border-color: red;
   z-index: 999; /* Päälimmäiseks */
 }
+
 /*Menun tyylit alkaa tästä*/
 .dropbtn {
     background-color: #e02908;
@@ -156,6 +137,7 @@ header {
 }
 
 .show {display:block;}
+
 #loginButton{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -164,13 +146,17 @@ header {
   max-width: 259px;
   top: 4px;
   right: 6px;
-  color: #e02908;
-  background-color: white;
+
+  color: white;
+  background-color: #e02908;
   padding: 0.1em;
-  border-style: solid;
-  border-width: medium;
-  border-color: red;
+  border: none;
   z-index: 999; /* Päälimmäiseks */
+}
+
+.loginfield {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
 }
 
 #image-gallery {
@@ -195,4 +181,9 @@ header {
 .currentimage img {
   padding: 2em;
   max-width: 80%;
+}
+
+/*estetään ettei html näy ennen angularin latautumista*/
+[ng\:cloak], [ng-cloak], .ng-cloak {
+      display: none;
 }
