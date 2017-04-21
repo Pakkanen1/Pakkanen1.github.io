@@ -1,4 +1,4 @@
-/* When the user clicks on the button, 
+/* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function menuFunction() {
     document.getElementById("menuDropdown").classList.toggle("show");
@@ -18,29 +18,18 @@ window.onclick = function(event) {
     }
   }
 }
-/*
-function myFunction() {
-    var x = document.getElementById('testihei');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-	
-
-} */
 
 $(document).ready(function(){
 	$("#loginButton").click(function(){
-		
+
 	var currentvalue = $("#loginButton").val();
-	
+
 	if (currentvalue == "Kirjaudu") {
-		$("#loginButton").val("Piiloita");
-        $("#login-window").slideDown();
+    		$("#loginButton").val("Piiloita");
+        $("#login-window").stop().slideDown();
 	} else if (currentvalue == "Piiloita") {
-		$("#loginButton").val("Kirjaudu");
-        $("#login-window").slideUp();
+		    $("#loginButton").val("Kirjaudu");
+        $("#login-window").stop().slideUp();
    }
  });
 });
