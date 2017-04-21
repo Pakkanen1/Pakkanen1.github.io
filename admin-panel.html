@@ -25,7 +25,7 @@
 <body ng-app="adminApp" ng-cloak>
 
 <header role="banner">
-<div id="fullpage">
+
 <div class="dropdown">
 <button onclick="menuFunction()" class="dropbtn">Menu</button>
   <div id="menuDropdown" class="dropdown-content">
@@ -36,22 +36,24 @@
 </div>
 
 </header>
-
+<div id="fullpage">
 <div id="previewcontrol" ng-controller="ImgHandler">
 		<img id="preimage" src="" alt="preview image" /><br>
 
 	<form action="upload.php" method="post" enctype="multipart/form-data">
+	    <h2>Select image to upload:</h2>
+	    <input type="file" id="fileToUpload" name="fileToUpload"  /><br><br>
+	    <input type="submit" value="Upload Image" name="submit" /><br><br>
+
 			<textarea ng-model="imgDesc" type="text-field" name="fileDescription" id="fileDescription"
 			placeholder="Put your tags here"></textarea><br>
-	    Select image to upload:
-	    <input type="file" name="fileToUpload" id="fileToUpload" /><br>
-	    <input type="submit" value="Upload Image" name="submit" />
+
 	</form>
 <br>
 <h2>Current tags for this image:</h2><br>
-{{imgDesc}}
+<p>{{imgDesc}}</p>
 
 </div>
-
+</div>
 </body>
 </html>

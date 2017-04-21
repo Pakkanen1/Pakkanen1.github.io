@@ -8,32 +8,14 @@ li {
  }
 
 /*Etusivun otsikko*/
-#main-header {font-size: 40px;}
+#main-header {font-size: 55px;}
 
 /*Hakupalkki*/
-#basic-search {width: 45%;}
+#basic-search {width: 45%; }
 
-.mobnavi {
-	display:none;
+.yhteysbtn {
+	margin: 5px;
+	font-size: 20px;
 }
 
- .bignavi {
-	display: block;
- }
-
- .bignav-item {
-	width: 100px;
- }
-
- .bignav-item a, button{
-	display: inline-block;
-	padding: 0.7em;
-	background: black;
-	color: White;
-	font-size: 1.12em;
-	text-decoration: none;
-	transition: color 0.2s, background 0.5s;
- }
-/*kuvien pikkukuvat*/
-  
 }

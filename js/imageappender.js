@@ -17,7 +17,7 @@ mainApp.controller('ImageView', function ($scope, $http) {
         // Asetetaan data eli http-vastauksen rakenne images-taulukkoon
         $scope.images = data;
         // Asetetaan aukiolevaksi kuvaksi images-taulukon ensimmäinen kuva
-        $scope.currentImage = $scope.images[0];
+        // $scope.currentImage = $scope.images[0];
         // Tarkistetaan saiko muuttuja oikeat arvot (eli taulukko täyttyi JSON-olioilla)
         console.log($scope.images);
 
