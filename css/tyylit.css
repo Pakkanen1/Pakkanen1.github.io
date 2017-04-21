@@ -177,3 +177,8 @@ header {
   padding: 2em;
   max-width: 80%;
 }
+
+/*estetään ettei html näy ennen angularin latautumista*/
+[ng\:cloak], [ng-cloak], .ng-cloak {
+      display: none;
+}
