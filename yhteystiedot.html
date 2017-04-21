@@ -6,56 +6,39 @@
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/tyylit.css">
 <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
 <script src="js/admin-login.js"></script>
 <script src="js/menubutton.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-<script src="js/admin-login.js"></script>
 <script type="text/javascript" src="js/yhteystiedot.js"></script>
 
 <title>Yhteystiedot, Vulkanus</title>
-
 
 <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 <![endif]-->
 
 </head>
-
-<body>
-<header role="banner">
 <body ng-app="yTiedot">
 
-
 <div id="fullpage">
-			<div id="login-window" hidden>
-				<form id="login">
-				<input class="loginText" type="text" name="username" placeholder="Tunnus"/><br>
-					<input class="loginText" type="password" name="password" placeholder="Salasana"/><br>
-					<input class="loginText" type="submit" value="Kirjaudu" />
-				</form>
-				</div>
-				
-				
-				
-<div class="dropdown">
-<button onclick="menuFunction()" class="dropbtn">Menu</button>
-  <div id="menuDropdown" class="dropdown-content">
-    <a href="index.html">Etusivu</a>
-    <a href="yhteystiedot.html">Yhteystiedot</a>
-    <a href="admin-panel.html">Admin</a>
-  </div>
-</div>
-<input type="button" id="loginButton" value="Kirjaudu" />
+
+	<header role="banner">
+		<div class="dropdown">
+		<button onclick="menuFunction()" class="dropbtn">Menu</button>
+		  <div id="menuDropdown" class="dropdown-content">
+		    <a href="index.html">Etusivu</a>
+		    <a href="yhteystiedot.html">Yhteystiedot</a>
+		    <a href="admin-panel.html">Admin</a>
+		  </div>
+		</div>
+		<input type="button" id="loginButton" value="Kirjaudu" />
 </header>
 
 	<div class="main-search">
 	<h1 id="main-header">Yhteystiedot</h1>
   </div>
-
   <div class="contact-info" id="contact-info" ng-controller="InfoView">
 	<button class="mobnav-item" id="teemu">Teemu Ruonti</button>
 	<button class="mobnav-item" id="antti">Antti Pakkanen</button>
@@ -68,7 +51,11 @@
 	<p id="hlö" class="ilari">{{contacts[3].name}}<br>{{contacts[3].phone}}<br>{{contacts[3].email}}</p>
 
   </div>
-
 </div>
+
+<div id="login-window" hidden>
+	<div ng-view></div>
+</div>
+
 </body>
 </html>

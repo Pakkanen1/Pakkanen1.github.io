@@ -1,3 +1,4 @@
+
 /* Tällä keskitetään koko sivun sisältö */
 #fullpage { max-width: 63em; margin: 0 auto;}
 
@@ -71,7 +72,6 @@ header {
 
 /*login napin muotoilu ja asettelu*/
 
-
 .contact-info {
   background: #d9ffcc;
   text-align: center;
@@ -83,6 +83,14 @@ header {
 #hlö {
 	position: center;
 	padding: 0.8em;
+}
+
+.login-page {
+  background: #d9ffcc;
+  text-align: center;
+  padding: 1em;
+  font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /*Login-ikkunan muotoilu ja asettelu. Oletuksena piilotettu,
@@ -101,6 +109,7 @@ header {
   border-color: red;
   z-index: 999; /* Päälimmäiseks */
 }
+
 /*Menun tyylit alkaa tästä*/
 .dropbtn {
     background-color: #e02908;
@@ -147,6 +156,7 @@ header {
 }
 
 .show {display:block;}
+
 #loginButton{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;

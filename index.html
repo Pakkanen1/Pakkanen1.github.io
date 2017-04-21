@@ -9,6 +9,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
 		<script type="text/javascript" src="js/imageappender.js"></script>
 		<script src="js/search-engine.js"></script>
 		<script src="js/admin-login.js"></script>
@@ -30,48 +31,33 @@
   </div>
 </div>
 <input type="button" id="loginButton" value="Kirjaudu" />
+
 </header>
 <div id="fullpage">
 
-	<div class="main-search">
-
-			 <div ng-controller="mainSearch" class="main-search">
-					 <h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
-					 <p>Kuvahaku</p>
-
-					 <form id="basic-search-form">
-						 <input ng-model="basicSearch" type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
-						 <input type="button" id="search-button" value="Hae">
-					 </form>
-					 <p>{{basicSearch}}</p>
-			 </div>
-	 </div>
-
 	<div id="image-gallery" ng-controller="ImageView">
-		<h3>{{currentImage.filename}}</h3>
+		<h1>Kuvahaku</h1>
+		<div id="searchInput"><input ng-model="query.description" placeholder="Etsi kuvia">
+		</div>
+
 	    <div id="current-image" class="currentimage">
 	        <img ng-src="{{currentImage.image}}" alt="{{currentImage.description}}">
 	    </div>
 	    <div id="thumnails">
-	        <ul id="thumbnail-list">
+	        <ul id="thumbnail-list" ng-show="query">
 						<!--Klikatessa thumbnailia ajetaan setCurrentImage() @ imageappender.js
 								ng-repeat toistaa <li>-elementin jokaiselle kuvalle images-taulukossa -->
-	            <li class="repeatedthumbnail" ng-repeat="image in images" ng-click="setCurrentImage(image)">
+	            <li class="repeatedthumbnail" ng-repeat="image in images | filter:query" ng-click="setCurrentImage(image)">
 	                <img ng-src="{{image.image}}" alt="{{image.description}}" />
 	            </li>
 	        </ul>
 	    </div>
 		</div>
 
-			<div id="login-window" hidden>
-				<form id="login">
-				<input class="loginText" type="text" name="username" placeholder="Tunnus"/><br>
-					<input class="loginText" type="password" name="password" placeholder="Salasana"/><br>
-					<input class="loginText" type="submit" value="Kirjaudu" />
-				</form>
-			</div>
+		<div id="login-window" hidden>
+			<div ng-view></div>
+		</div>
 
-
- </div>
+	</div>
 </body>
 </html>
