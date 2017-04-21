@@ -1,5 +1,6 @@
+
 /* Tällä keskitetään koko sivun sisältö */
-#fullpage { max-width: 63em; margin: auto;}
+#fullpage { max-width: 63em; margin: 0 auto;}
 
 body {
   background-color: #d9ffcc;
@@ -65,32 +66,11 @@ header {
   height: 100%;
   background: #298;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5em 0em;
 
-}
-
-/*kuvien listaus ja asettelu*/
-#image-view {
-  display: inline-block;
-  text-align: center;
-  margin: 1em;
-}
-#image-view img {
-    max-width: 50%;
-    padding: 3px;
 }
 
 /*login napin muotoilu ja asettelu*/
-#login-button {
-  position: absolute;
-  top: 2.5px;
-  right: 2px;
-  color: white;
-  background-color: #111;
-  border-color: #111;
-  font-weight: bold;
-	font-family: 'Montserrat', sans-serif;
-}
 
 .contact-info {
   background: #d9ffcc;
@@ -116,11 +96,104 @@ header {
 /*Login-ikkunan muotoilu ja asettelu. Oletuksena piilotettu,
   mutta näkyvillä kehitystä varten*/
 #login-window {
+  width: 250px;
+  max-width: 250px;
   position: absolute;
-  top: 40%;
-  right: 50%;
-  color: white;
-  background-color: #111;
-  padding: 1em;
+  top: 32px;
+  right: 6px;
+  color: #e02908;
+  background-color: white;
+  padding: 0.1em;
+  border-style: solid;
+  border-width: medium;
+  border-color: red;
   z-index: 999; /* Päälimmäiseks */
+}
+
+/*Menun tyylit alkaa tästä*/
+.dropbtn {
+    background-color: #e02908;
+    color: white;
+    padding: 10px;
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #bc2307;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #e02908;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+  background-color: #e02908;
+   color:white;
+   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.show {display:block;}
+
+#loginButton{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  width: 259px;
+  max-width: 259px;
+  top: 4px;
+  right: 6px;
+  color: #e02908;
+  background-color: white;
+  padding: 0.1em;
+  border-style: solid;
+  border-width: medium;
+  border-color: red;
+  z-index: 999; /* Päälimmäiseks */
+}
+
+#image-gallery {
+  text-align: center;
+}
+
+.repeatedthumbnail {
+  cursor: pointer;
+}
+
+.repeatedthumbnail img {
+  padding: 1em;
+  width: 150px;
+  height: 150px;
+}
+
+.currentimage {
+  text-align: center;
+  cursor: pointer;
+}
+
+.currentimage img {
+  padding: 2em;
+  max-width: 80%;
 }
