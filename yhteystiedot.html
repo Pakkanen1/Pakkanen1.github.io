@@ -20,7 +20,7 @@
 <![endif]-->
 
 </head>
-<body ng-app="yTiedot">
+<body ng-app="yTiedot" ng-cloak>
 
 <div id="fullpage">
 
@@ -30,11 +30,11 @@
 		  <div id="menuDropdown" class="dropdown-content">
 		    <a href="index.html">Etusivu</a>
 		    <a href="yhteystiedot.html">Yhteystiedot</a>
-		    <a href="admin-panel.html">Admin</a>
+
 		  </div>
 		</div>
 		<input type="button" id="loginButton" value="Kirjaudu" />
-</header>
+	</header>
 
 	<div class="main-search">
 	<h1 id="main-header">Yhteystiedot</h1>
@@ -45,7 +45,7 @@
 	<button class="mobnav-item" id="arttu">Arttu Seppä-Lassila</button>
 	<button class="mobnav-item" id="ilari">Ilari Nikander</button>
 
-    <p id="hlö" class="teemu">{{contacts[0].name}}<br>{{contacts[0].phone}}<br>{{contacts[0].email}}</p>
+  <p id="hlö" class="teemu">{{contacts[0].name}}<br>{{contacts[0].phone}}<br>{{contacts[0].email}}</p>
 	<p id="hlö" class="antti">{{contacts[1].name}}<br>{{contacts[1].phone}}<br>{{contacts[1].email}}</p>
 	<p id="hlö" class="arttu">{{contacts[2].name}}<br>{{contacts[2].phone}}<br>{{contacts[2].email}}</p>
 	<p id="hlö" class="ilari">{{contacts[3].name}}<br>{{contacts[3].phone}}<br>{{contacts[3].email}}</p>
