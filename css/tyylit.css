@@ -1,3 +1,4 @@
+
 /* Tällä keskitetään koko sivun sisältö */
 #fullpage { max-width: 63em; margin: 0 auto;}
 
@@ -83,6 +84,14 @@ header {
 #hlö {
 	position: center;
 	padding: 0.8em;
+}
+
+.login-page {
+  background: #d9ffcc;
+  text-align: center;
+  padding: 1em;
+  font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /*Login-ikkunan muotoilu ja asettelu. Oletuksena piilotettu,
