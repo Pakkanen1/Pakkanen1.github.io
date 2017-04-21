@@ -16,41 +16,41 @@ yTiedot.controller('InfoView', function ($scope) {
 $(document).ready(function() {
 	//Aluksi piilotetaan kaikkien henkilöiden yhteystiedot
 	$('#hlö').hide();
-
+	
 	//Klikataan Teemun nappia
 	$('#teemu').click(function () {
 		//Piilotetaan kaikkien henkilöiden yhteystiedot
 		$('#hlö').hide();
 		//Vieritetään alas Teemun yhteystiedot
 		$('.teemu').slideDown(500);
-
+		
 	}); //click
-
+	
 	//Klikataan Antin nappia
 	$('#antti').click(function () {
 		//Piilotetaan kaikkien henkilöiden yhteystiedot
 		$('#hlö').hide();
 		//Vieritetään alas Antin yhteystiedot
 		$('.antti').slideDown(500);
-
+		
 	}); //click
-
+	
 	//Klikataan Artun nappia
 	$('#arttu').click(function () {
 		//Piilotetaan kaikkien henkilöiden yhteystiedot
 		$('#hlö').hide();
 		//Vieritetään alas Artun yhteystiedot
 		$('.arttu').slideDown(500);
-
+		
 	}); //click
-
+	
 	//Klikataan Ilarin nappia
 	$('#ilari').click(function () {
 		//Piilotetaan kaikkien henkilöiden yhteystiedot
 		$('#hlö').hide();
 		//Vieritetään alas Ilarin yhteystiedot
 		$('.ilari').slideDown(500);
-
+		
 	}); //click
-
+	
 }); //ready loppuu
