@@ -16,9 +16,9 @@ mainApp.controller('ImageView', function ($scope, $http) {
         // Asetetaan data eli http-vastauksen rakenne images-taulukkoon
         $scope.images = data;
         // Asetetaan aukiolevaksi kuvaksi images-taulukon ensimmäinen kuva
-        $scope.currentImage = $scope.images[0];
+        // $scope.currentImage = $scope.images[0];
         // Tarkistetaan saiko muuttuja oikeat arvot (eli taulukko täyttyi JSON-olioilla)
-        console.log($scope.images);
+        console.log($scope.images[0]);
 
     } // handleLoadedImages
 
@@ -42,11 +42,11 @@ mainApp.controller('ImageView', function ($scope, $http) {
 }); // Controller loppuu
 
 // Etusivun hakupalkin controller
-mainApp.controller('ImageSearch', function ($scope, $http) {
-    $http.get('image_json/horadriccube.json').success(function (data) {
-        $scope.images = data;
-    });
-});
+// mainApp.controller('ImageSearch', function ($scope, $http) {
+//     $http.get('image_json/horadriccube.json').success(function (data) {
+//         $scope.images = data;
+//     });
+// });
 
 mainApp.animation('.repeatedthumbnail', function() {
   return {
