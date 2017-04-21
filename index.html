@@ -10,6 +10,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+
 		<script type="text/javascript" src="js/imageappender.js"></script>
 		<script src="js/search-engine.js"></script>
 		<script src="js/admin-login.js"></script>
@@ -27,6 +28,7 @@
   <div id="menuDropdown" class="dropdown-content">
     <a href="index.html">Etusivu</a>
     <a href="yhteystiedot.html">Yhteystiedot</a>
+
   </div>
 </div>
 <input type="button" id="loginButton" value="Kirjaudu" />
@@ -45,6 +47,7 @@
 			 	<li ng-repeat="image in images | filter:query">{{image.description}}</li>
 			</ul>
 		</div>
+
 	 </div>
 
 	<div id="image-gallery" ng-controller="ImageView">

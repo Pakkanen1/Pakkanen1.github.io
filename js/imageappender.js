@@ -1,6 +1,7 @@
 // Luodaan etusivun moduuli
 var mainApp = angular.module('mainApp', ['ngAnimate', 'ngRoute']);
 
+
 // Luodaan image-gallery diville controller
 mainApp.controller('ImageView', function ($scope, $http) {
     // Luodaan string-muuttuja JSON-tietokannan polulle
@@ -40,13 +41,6 @@ mainApp.controller('ImageView', function ($scope, $http) {
     $scope.getImg();
 
 }); // Controller loppuu
-
-// Etusivun hakupalkin controller
-mainApp.controller('ImageSearch', function ($scope, $http) {
-    $http.get('image_json/horadriccube.json').success(function (data) {
-        $scope.images = data;
-    });
-});
 
 mainApp.animation('.repeatedthumbnail', function() {
   return {
