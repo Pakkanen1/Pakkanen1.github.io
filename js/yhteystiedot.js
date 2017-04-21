@@ -1,5 +1,5 @@
 //Luodaan yhteystietosivun moduuli
-var yTiedot = angular.module('yTiedot', ['ngR']);
+var yTiedot = angular.module('yTiedot', ['ngRoute']);
 
 //Luodaan contact-info diville controller
 yTiedot.controller('InfoView', function ($scope) {
