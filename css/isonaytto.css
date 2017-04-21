@@ -1,6 +1,6 @@
 @media screen and (min-width: 704px) {
 
-#fullpage { max-width: 100%; margin: auto;}
+#fullpage { max-width: 100%; margin: 0 auto;}
 
 li {
 	display: inline;
@@ -35,8 +35,5 @@ li {
 	transition: color 0.2s, background 0.5s;
  }
 /*kuvien pikkukuvat*/
-#image-view img {
-     max-width: 20%;
- }
-
+  
 }

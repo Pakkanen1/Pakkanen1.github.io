@@ -1,5 +1,5 @@
 // Luodaan etusivun moduuli
-var mainApp = angular.module('mainApp', []);
+var mainApp = angular.module('mainApp', ['ngAnimate']);
 
 // Luodaan image-gallery diville controller
 mainApp.controller('ImageView', function ($scope, $http) {
@@ -40,3 +40,30 @@ mainApp.controller('ImageView', function ($scope, $http) {
     $scope.getImg();
 
 }); // Controller loppuu
+
+// Etusivun hakupalkin controller
+mainApp.controller('mainSearch', function($scope) {
+	$scope.basicSearch = "";
+});
+
+mainApp.animation('.repeatedthumbnail', function() {
+  return {
+    enter: function(element, done) {
+      element.css('display', 'none');
+      $(element).fadeIn(1000, function() {
+        done();
+      });
+    },
+    leave: function(element, done) {
+      $(element).fadeOut(1000, function() {
+        done();
+      });
+    },
+    move: function(element, done) {
+      element.css('display', 'none');
+      $(element).slideDown(500, function() {
+        done();
+      });
+    }
+  }
+});
