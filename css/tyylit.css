@@ -147,12 +147,10 @@ header {
   max-width: 259px;
   top: 4px;
   right: 6px;
-  color: #e02908;
-  background-color: white;
+  color: white;
+  background-color: #e02908;
   padding: 0.1em;
-  border-style: solid;
-  border-width: medium;
-  border-color: red;
+  border: none;
   z-index: 999; /* Päälimmäiseks */
 }
 
