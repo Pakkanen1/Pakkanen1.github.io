@@ -39,16 +39,15 @@
 
 	<div class="main-search">
 
-			 <div ng-controller="mainSearch" class="main-search">
-					 <h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
-					 <p>Kuvahaku</p>
+		<div ng-controller="ImageSearch">
+			<h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
+			<p>Kuvahaku</p>
 
-					 <form id="basic-search-form">
-						 <input ng-model="basicSearch" type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
-						 <input type="button" id="search-button" value="Hae">
-					 </form>
-					 <p>{{basicSearch}}</p>
-			 </div>
+			<input ng-model="query.description" placeholder="Etsi kuvia">
+			<ul ng-show="query">
+			 	<li ng-repeat="image in images | filter:query">{{image.description}}</li>
+			</ul>
+		</div>
 	 </div>
 
 	<div id="image-gallery" ng-controller="ImageView">

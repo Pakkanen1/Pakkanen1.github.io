@@ -42,8 +42,10 @@ mainApp.controller('ImageView', function ($scope, $http) {
 }); // Controller loppuu
 
 // Etusivun hakupalkin controller
-mainApp.controller('mainSearch', function($scope) {
-	$scope.basicSearch = "";
+mainApp.controller('ImageSearch', function ($scope, $http) {
+    $http.get('image_json/horadriccube.json').success(function (data) {
+        $scope.images = data;
+    });
 });
 
 mainApp.animation('.repeatedthumbnail', function() {
