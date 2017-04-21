@@ -13,12 +13,9 @@
 <link rel="stylesheet" type="text/css" href="css/tyylit.css">
 <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
 
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script src="js/search-engine.js"></script>
-<script src="js/admin-login.js"></script>
 <script src="js/adminpage.js"></script>
 <script src="js/menubutton.js"></script>
 
@@ -27,7 +24,7 @@
 <![endif]-->
 
 </head>
-<body ng-app="mainApp">
+<body ng-app="adminApp">
 <header role="banner">
 <div id="fullpage">
 <div class="dropdown">
@@ -38,7 +35,7 @@
     <a href="admin-panel.html">Admin</a>
   </div>
 </div>
-<input type="button" id="loginButton" value="Kirjaudu" />
+
 </header>
 
 	<div class="main-search">
@@ -50,23 +47,6 @@
 		  <input type="button" id="search-button" value="Hae">
 		</form>
 	</div>
-
-<div id="login-window" hidden>
-				
-				<div id="adminButton" class="drodpown-content-admin">
-				<form id="login">
-				
-				
-					
-					<input class="loginText" type="text" name="username" placeholder="Tunnus"/><br>
-					<input class="loginText" type="password" name="password" placeholder="Salasana"/><br>
-					<input class="loginText" type="submit" value="Kirjaudu" />
-					
-				
-				</form>
-				</div>
-		</div>
-				
 
 <div id="previewcontrol" ng-controller="ImgHandler">
 		<img id="preimage" src="" alt="preview image" /><br>
