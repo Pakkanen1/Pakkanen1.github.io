@@ -9,6 +9,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+
 		<script type="text/javascript" src="js/imageappender.js"></script>
 		<script src="js/search-engine.js"></script>
 		<script src="js/admin-login.js"></script>
@@ -18,37 +20,34 @@
     <title>Vulkanuksen Kuvagalleria</title>
 </head>
 
-<body ng-app="mainApp">
+<body ng-app="mainApp" ng-cloak>
+
 <header role="banner">
 <div class="dropdown">
 <button onclick="menuFunction()" class="dropbtn">Menu</button>
   <div id="menuDropdown" class="dropdown-content">
     <a href="index.html">Etusivu</a>
     <a href="yhteystiedot.html">Yhteystiedot</a>
-    <a href="admin-panel.html">Admin</a>
+
   </div>
 </div>
 <input type="button" id="loginButton" value="Kirjaudu" />
-  
-  <form action="loginform.html">
-				<input type="submit" id="login-button" value="Kirjaudu sisään" />
-	</form>
-  
+
 </header>
 <div id="fullpage">
 
 	<div class="main-search">
 
-			 <div ng-controller="mainSearch" class="main-search">
-					 <h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
-					 <p>Kuvahaku</p>
+		<div ng-controller="ImageSearch">
+			<h1 id="main-header">Vulkanuksen Kuvagalleria</h1>
+			<p>Kuvahaku</p>
 
-					 <form id="basic-search-form">
-						 <input ng-model="basicSearch" type="text" name="search" id="basic-search" placeholder="Etsi kuvia..." value="">
-						 <input type="button" id="search-button" value="Hae">
-					 </form>
-					 <p>{{basicSearch}}</p>
-			 </div>
+			<input ng-model="query.description" placeholder="Etsi kuvia">
+			<ul ng-show="query">
+			 	<li ng-repeat="image in images | filter:query">{{image.description}}</li>
+			</ul>
+		</div>
+
 	 </div>
 
 	<div id="image-gallery" ng-controller="ImageView">
@@ -67,15 +66,10 @@
 	    </div>
 		</div>
 
-			<div id="login-window" hidden>
-				<form id="login">
-				<input class="loginText" type="text" name="username" placeholder="Tunnus"/><br>
-					<input class="loginText" type="password" name="password" placeholder="Salasana"/><br>
-					<input class="loginText" type="submit" value="Kirjaudu" />
-				</form>
-			</div>
+		<div id="login-window" hidden>
+			<div ng-view></div>
+		</div>
 
 	</div>
- </div>
 </body>
 </html>

@@ -10,6 +10,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
 <script src="js/admin-login.js"></script>
+<script src="js/menubutton.js"></script>
 <script type="text/javascript" src="js/yhteystiedot.js"></script>
 
 <title>Yhteystiedot, Vulkanus</title>
@@ -19,24 +20,19 @@
 <![endif]-->
 
 </head>
-<body ng-app="yTiedot">
+<body ng-app="yTiedot" ng-cloak>
 
 <div id="fullpage">
 
 	<header role="banner">
-		<nav role="navigation">
-			<ul class="bignavi">
-			<li class="bignav-item"><a href="index.html">Etusivu</a></li>
-			<li class="bignav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
-			</ul>
-			<ul class="mobnavi">
-			<li class="mobnav-item"><a href="index.html">Etusivu</a></li>
-			<li class="mobnav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
-			</ul>
-		</nav>
-		<form action="loginform.html">
-			<input type="submit" id="login-button" value="Kirjaudu sisään" />
-		</form>
+		<div class="dropdown">
+		<button onclick="menuFunction()" class="dropbtn">Menu</button>
+		  <div id="menuDropdown" class="dropdown-content">
+		    <a href="index.html">Etusivu</a>
+		    <a href="yhteystiedot.html">Yhteystiedot</a>
+		  </div>
+		</div>
+		<input type="button" id="loginButton" value="Kirjaudu" />
 	</header>
 
 	<div class="main-search">
@@ -47,13 +43,17 @@
 	<button class="mobnav-item" id="antti">Antti Pakkanen</button>
 	<button class="mobnav-item" id="arttu">Arttu Seppä-Lassila</button>
 	<button class="mobnav-item" id="ilari">Ilari Nikander</button>
-	
+
     <p id="hlö" class="teemu">{{contacts[0].name}}<br>{{contacts[0].phone}}<br>{{contacts[0].email}}</p>
 	<p id="hlö" class="antti">{{contacts[1].name}}<br>{{contacts[1].phone}}<br>{{contacts[1].email}}</p>
 	<p id="hlö" class="arttu">{{contacts[2].name}}<br>{{contacts[2].phone}}<br>{{contacts[2].email}}</p>
 	<p id="hlö" class="ilari">{{contacts[3].name}}<br>{{contacts[3].phone}}<br>{{contacts[3].email}}</p>
-	
+
   </div>
+</div>
+
+<div id="login-window" hidden>
+	<div ng-view></div>
 </div>
 
 </body>
