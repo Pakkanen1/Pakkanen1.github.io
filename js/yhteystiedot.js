@@ -52,6 +52,7 @@ $(document).ready(function() {
 		$('.ilari').slideDown(500);
 
 	}); //click
+
 }); //ready loppuu
 
 //Määritellään reititys
