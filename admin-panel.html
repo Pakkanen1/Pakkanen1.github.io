@@ -27,7 +27,7 @@
 <header role="banner">
 
 <div class="dropdown">
-<button onclick="menuFunction()" class="dropbtn">Menu</button>
+<button onclick="menuFunction()" class="dropbtn">Valikko</button>
   <div id="menuDropdown" class="dropdown-content">
     <a href="index.html">Etusivu</a>
     <a href="yhteystiedot.html">Yhteystiedot</a>
@@ -43,10 +43,11 @@
 	<form action="upload.php" method="post" enctype="multipart/form-data">
 	    <h2>Select image to upload:</h2>
 	    <input type="file" id="fileToUpload" name="fileToUpload"  /><br><br>
-	    <input type="submit" value="Upload Image" name="submit" /><br><br>
+	    <input id="uploadbtn" type="submit" value="Upload Image" name="submit" /><br><br>
 
-			<textarea ng-model="imgDesc" type="text-field" name="fileDescription" id="fileDescription"
-			placeholder="Put your tags here"></textarea><br>
+			<textarea ng-model="imgDesc" type="text-field"
+      name="fileDescription" id="fileDescription"
+			placeholder="Put your tags here" maxlength="400"></textarea><br>
 
 	</form>
 <br>

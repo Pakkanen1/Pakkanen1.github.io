@@ -19,10 +19,10 @@ adminApp.controller('ImgHandler', function($scope) {
 
     // Luetaan kuvatiedosto tiedostopolun kautta.
     lukija.readAsDataURL(this.files[0]);
-
-    console.log(this.files[0]);
+    
   };
 
+  // Tagien listaajan muuttuja
   $scope.imgDesc = "";
 
 });

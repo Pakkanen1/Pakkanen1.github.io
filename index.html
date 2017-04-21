@@ -23,7 +23,7 @@
 
 <header role="banner">
 <div class="dropdown">
-<button onclick="menuFunction()" class="dropbtn">Menu</button>
+<button onclick="menuFunction()" class="dropbtn">Valikko</button>
   <div id="menuDropdown" class="dropdown-content">
     <a href="index.html">Etusivu</a>
     <a href="yhteystiedot.html">Yhteystiedot</a>
@@ -42,9 +42,12 @@
 			<input id="search" ng-model="query.description" placeholder="Etsi kuvia">
 		</div>
 
-	    <div id="current-image" class="currentimage">
+			<input type="button" value="Sulje Esikatselu" id="imagehidebtn" ng-click="closeImage()"/>
+
+	    <div id="current-image" class="currentimage" ng-click="imgHighlight()">
 	        <img ng-src="{{currentImage.image}}" alt="{{currentImage.description}}">
 	    </div>
+
 	    <div id="thumnails">
 	        <ul id="thumbnail-list" ng-show="query">
 						<!--Klikatessa thumbnailia ajetaan setCurrentImage() @ imageappender.js
@@ -61,5 +64,6 @@
 		</div>
 
 	</div>
+	<div id="page-cover"></div>
 </body>
 </html>
