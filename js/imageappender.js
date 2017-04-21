@@ -1,4 +1,6 @@
+// Luodaan etusivun moduuli
 var mainApp = angular.module('mainApp', ['ngAnimate', 'ngRoute']);
+
 
 // Luodaan image-gallery diville controller
 mainApp.controller('ImageView', function ($scope, $http) {
