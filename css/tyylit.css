@@ -1,9 +1,23 @@
 
 /* Tällä keskitetään koko sivun sisältö */
-#fullpage { max-width: 63em; margin: 0 auto;}
+#fullpage {
+  max-width: 63em;
+  margin: 0 auto;
+}
+
+#page-cover {
+  display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
 
 body {
-  background-color: #d9ffcc;
+  background-color: #FF8F6A;
 }
 
 li {
@@ -17,33 +31,22 @@ h1, h2, h3, h4, ul, li {
 	font-family: 'Montserrat', sans-serif;
 }
 /*headeriin kuuluu navigointi ja login-button*/
-header {
+header, header button, header input{
   padding: 0;
 	width: 100%;
 	text-align: left;
 	z-index: 5;
-	background-color: #6d8f3d;
+	background-color: #8F2908;
 }
 
 /*pääotsikko, "Vulkanuksen kuvapankki"*/
 #main-header {font-size: 20px; padding:0.2em;}
 
-#login-header {font-size: 17px; padding:0.2em;}
-
-.login-bg {
-	/*Hakulomakkeen div, muotoilua varten*/
-  width: 100%;
-  height: 100%;
-  background: white;
-  text-align: center;
-  padding: 0.5em 0em;
-}
-
 	/*Hakulomakkeen div, muotoilua varten*/
 #searchInput {
   width: 100%;
   height: 100%;
-  background: #ad3b53;
+  background: #BA422D;
   text-align: center;
   padding: 0.5em 0em;
   font-size: 24px;
@@ -60,16 +63,11 @@ input#search {
     text-align: center;
 }
 
-
-
-/*login napin muotoilu ja asettelu*/
-
 .contact-info {
-  background: #d9ffcc;
   text-align: center;
-  padding: 1em;
+  padding: 0.1em;
   font-weight: bold;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 #hlö {
@@ -77,34 +75,9 @@ input#search {
 	padding: 0.8em;
 }
 
-.login-page {
-  background: #d9ffcc;
-  text-align: center;
-  padding: 1em;
-  font-weight: bold;
-	font-family: 'Montserrat', sans-serif;
-}
-
-/*Login-ikkunan muotoilu ja asettelu. Oletuksena piilotettu,
-  mutta näkyvillä kehitystä varten*/
-#login-window {
-  width: 250px;
-  max-width: 250px;
-  position: absolute;
-  top: 32px;
-  right: 6px;
-  color: #e02908;
-  background-color: white;
-  padding: 0.1em;
-  border-style: solid;
-  border-width: medium;
-  border-color: red;
-  z-index: 999; /* Päälimmäiseks */
-}
-
 /*Menun tyylit alkaa tästä*/
 .dropbtn {
-    background-color: #e02908;
+    /*background-color: #e02908;*/
     color: white;
     padding: 10px;
     font-size: 26px;
@@ -123,46 +96,96 @@ input#search {
 
 .dropdown-content {
     font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	display: none;
+  	font-weight: bold;
+  	display: none;
     position: absolute;
-    background-color: white;
+    background-color: #8F2908;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .dropdown-content a {
-    color: #e02908;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown a:hover {
-  background-color: #e02908;
+  background-color: #bc2307;
    color:white;
    font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 .show {display:block;}
-
-#loginButton{
-  font-family: Arial, Helvetica, sans-serif;
+/*
+.login-page {
+  background: #d9ffcc;
+  text-align: center;
+  padding: 1em;
   font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+}*/
+
+/*Login-ikkunan muotoilu ja asettelu. Oletuksena piilotettu,
+  mutta näkyvillä kehitystä varten*/
+
+#login-header {font-size: 17px; padding:0.2em;}
+
+.login-bg {
+  	/*Hakulomakkeen div, muotoilua varten*/
+    width: 100%;
+    height: 100%;
+    background-color: #8F2908;
+    text-align: center;
+    padding: 0.5em 0em;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.login-bg button{
+  border-radius: 40px;
+  padding: 2px 25px;
+  background-color: #8F2908;
+}
+
+#login-window {
+  width: 250px;
+  max-width: 250px;
   position: absolute;
-  width: 259px;
+  top: 49px;
+  right: 5px;
+  color: #fff;
+  padding: 0.1em;
+  z-index: 999; /* Päälimmäiseks */
+}
+
+#loginButton {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 120px;
   max-width: 259px;
-  top: 4px;
+  top: 0px;
   right: 6px;
+  color: white;
+  font-size: 26px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
 
   color: white;
-  background-color: #e02908;
-  padding: 0.1em;
+  /*background-color: #e02908;*/
   border: none;
   z-index: 999; /* Päälimmäiseks */
+}
+
+#loginButton:hover, #loginButton:focus {
+    background-color: #bc2307;
 }
 
 .loginfield {
@@ -170,19 +193,42 @@ input#search {
 	font-weight: bold;
 }
 
+.yhteysbtn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px;
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+}
+.yhteysbtn:hover{
+  background-color: gray;
+}
+
 #image-gallery {
   text-align: center;
 }
 
+/*Thumbnailien tyylit */
 .repeatedthumbnail {
   cursor: pointer;
 }
 
 .repeatedthumbnail img {
-  padding: 1em;
   width: 150px;
   height: 150px;
 }
+
+.repeatedthumbnail:active img {
+   opacity: 0.5;
+}
+
+.repeatedthumbnail:hover img {
+   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+} /* nailit loppuu */
+
+/* Esikatselun ja currentimagen tyylit */
 
 .currentimage {
   text-align: center;
@@ -190,9 +236,83 @@ input#search {
 }
 
 .currentimage img {
-  padding: 2em;
-  max-width: 80%;
+  padding: 1px;
 }
+
+/* Esikatselun sulkemisen nappi */
+#imagehidebtn {
+  background-color: black;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  padding: 1em;
+
+  /* Asettelu */
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 99999;
+  cursor: pointer;
+}
+#imagehidebtn:hover {
+  background-color: gray;
+} /* ESIKATSELU LOPPUU */
+
+/* ADMINPAGE MUOTOILU */
+
+#previewcontrol {
+ padding: 1em;
+ text-align: center;
+ word-wrap: break-word;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+#previewcontrol input {
+ padding: 0.5em;
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold;
+ color: white;
+ background-color: #000;
+ border: none;
+ border-radius: 10px;
+}
+
+#uploadbtn {
+  font-size: 20px;
+}
+#uploadbtn:hover {
+  background-color: #424242;
+}
+#uploadbtn:active {
+  opacity: 0.5;
+}
+
+#previewcontrol h2{
+ padding: 1em;
+ text-align: center;
+}
+
+#previewcontrol p {
+  color: #424242;
+  font-weight: bold;
+  font-size: 32px;
+  text-shadow: 0 0 3px #fff, 0 0 5px black;
+}
+
+#fileDescription {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 240px;
+  max-width: 240px;
+  min-width: 150px;
+  height: 150px;
+  max-height: 170px;
+}
+
+/* ADMINPAGE MUOTOILU LOPPUU */
 
 /*estetään ettei html näy ennen angularin latautumista*/
 [ng\:cloak], [ng-cloak], .ng-cloak {
