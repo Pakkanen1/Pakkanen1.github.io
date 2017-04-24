@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/tyylit.css">
 <link rel="stylesheet" type="text/css" href="css/isonaytto.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
 <script src="js/admin-login.js"></script>
@@ -52,6 +55,12 @@
 <div id="login-window" hidden>
 	<div ng-view></div>
 </div>
+
+<div id="errordialog" title="Vulkanus on huolissaan;" hidden>
+	<p><span class="ui-icon ui-icon-alert"></span>Väärä tunnus tai salasana!</p>
+	<img src="images/errorvulkanus.png" />
+</div>
+
 
 </body>
 </html>

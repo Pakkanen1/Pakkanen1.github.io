@@ -54,7 +54,8 @@ mainApp.controller('ImageView', function ($scope, $http) {
           {
             "position":"absolute",
             "left": "50%",
-            "transform": "translate(-50%, 0)",
+            "margin-right": "-50%",
+            "transform": "translate(-50%, 0%)",
             "z-index": "99999"
           });
         // Lisätään varjoefekti
@@ -76,6 +77,7 @@ mainApp.controller('ImageView', function ($scope, $http) {
         $('#current-image').css({
           "position":"",
           "left": "",
+          "margin-right": "",
           "transform": "",
           "z-index": "",
           "box-shadow": ""
@@ -153,8 +155,17 @@ mainApp.controller('LoginView', function($scope, $location, $rootScope) {
 			//Muutetaan polku admin-paneeliin
       window.location.href= "./admin-panel.html"
 		} else {
-			//Jos tunnus tai salasana on väärin, annetaan virhe
-			alert("Väärä tunnus tai salasana");
+			//Jos tunnus tai salasana on väärin, annetaan virhe dialogi
+      $( function (){
+        $("#errordialog").dialog({
+          resizable: false,
+          height: "auto",
+          width: 300,
+          // Himmennetään loppunäyttö
+          modal: true
+        }); // dialog
+      }); // anonyymi funktio
+
 		} //else
 	}; // submit
 }); //Controller loppuu
