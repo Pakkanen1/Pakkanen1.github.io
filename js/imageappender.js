@@ -153,8 +153,10 @@ mainApp.controller('LoginView', function($scope, $location, $rootScope) {
 			//Muutetaan polku admin-paneeliin
       window.location.href= "./admin-panel.html"
 		} else {
+			var title = "Oopsie! Something went wrong";
 			//Jos tunnus tai salasana on väärin, annetaan virhe
-			alert("Väärä tunnus tai salasana");
+			window.location.replace('./errorpage.html');
+			
 		} //else
 	}; // submit
 }); //Controller loppuu
