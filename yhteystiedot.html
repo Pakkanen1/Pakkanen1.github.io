@@ -12,7 +12,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
-<script src="js/admin-login.js"></script>
+
 <script src="js/menubutton.js"></script>
 <script type="text/javascript" src="js/yhteystiedot.js"></script>
 
@@ -40,17 +40,17 @@
 	</header>
 
   <div class="contact-info" id="contact-info" ng-controller="InfoView">
-	<button class="yhteysbtn" value = "teemu" id="teemu">Teemu Ruonti</button><br>
-	<p id="hlö" class="teemu">{{contacts[0].name}}<br>{{contacts[0].phone}}<br>{{contacts[0].email}}</p>
-	<button class="yhteysbtn" value = "antti" id="antti">Antti Pakkanen</button><br>
-	<p id="hlö" class="antti">{{contacts[1].name}}<br>{{contacts[1].phone}}<br>{{contacts[1].email}}</p>
-	<button class="yhteysbtn" value = "arttu" id="arttu">Arttu Seppä-Lassila</button><br>
-	<p id="hlö" class="arttu">{{contacts[2].name}}<br>{{contacts[2].phone}}<br>{{contacts[2].email}}</p>
-	<button class="yhteysbtn" value ="ilari" id="ilari">Ilari Nikander</button><br>
-	<p id="hlö" class="ilari">{{contacts[3].name}}<br>{{contacts[3].phone}}<br>{{contacts[3].email}}</p>
-
+		<button class="yhteysbtn" value = "teemu" id="teemu">Teemu Ruonti</button><br>
+		<p id="hlö" class="teemu">{{contacts[0].name}}<br>{{contacts[0].phone}}<br>{{contacts[0].email}}</p>
+		<button class="yhteysbtn" value = "antti" id="antti">Antti Pakkanen</button><br>
+		<p id="hlö" class="antti">{{contacts[1].name}}<br>{{contacts[1].phone}}<br>{{contacts[1].email}}</p>
+		<button class="yhteysbtn" value = "arttu" id="arttu">Arttu Seppä-Lassila</button><br>
+		<p id="hlö" class="arttu">{{contacts[2].name}}<br>{{contacts[2].phone}}<br>{{contacts[2].email}}</p>
+		<button class="yhteysbtn" value ="ilari" id="ilari">Ilari Nikander</button><br>
+		<p id="hlö" class="ilari">{{contacts[3].name}}<br>{{contacts[3].phone}}<br>{{contacts[3].email}}</p>
   </div>
-</div>
+
+</div> <!-- fullpage -->
 
 <div id="login-window" hidden>
 	<div ng-view></div>

@@ -16,24 +16,24 @@ yTiedot.controller('InfoView', function ($scope) {
 $(document).ready(function() {
 	//Aluksi piilotetaan kaikkien henkilöiden yhteystiedot
 	$('#hlö').hide();
-	
+
 	//Klikataan Teemun nappia
 	$('#teemu').click(function () {
-	
+
 	//Laitetaan Teemun yhteystieto -nappulan arvo muuttujaan currentvalue
 	var currentvalue = $("#teemu").val();
-	
 
-//Jos nappulan arvo on "teemu", tiedot on piilossa ja klikkaamalla tiedot tulevat näkyville.	
+
+//Jos nappulan arvo on "teemu", tiedot on piilossa ja klikkaamalla tiedot tulevat näkyville.
 	if (currentvalue == "teemu"){
-	
+
 		//Piilotetaan kaikkien muiden henkilöiden yhteystiedot
 		$('#hlö').hide();
 		//Annetaan muille nappuloille niiden oletusarvot, jotta uuteen nappulaan siirtyminen sulkematta vanhaa ei aiheuta toimintavirhettä.
 		$('#ilari').val("ilari");
 		$('#arttu').val("arttu");
 		$('#antti').val("antti");
-		
+
 		//Vieritetään alas Teemun yhteystiedot
 		$('.teemu').slideDown(500);
 		//Nappulan arvoksi annetaan "ruonti"
@@ -45,103 +45,98 @@ $(document).ready(function() {
 		$('.teemu').slideUp(500);
 		//Nappulan arvoksi annetaan "teemu"
 		$('#teemu').val("teemu");
-	}	
+	}
 	}); //click
-	
+
 	//Klikataan Antin nappia
 	$('#antti').click(function () {
-	
-	//Laitetaan Antin yhteystieto -nappulan arvo muuttujaan currentvalue
-	var currentvalue = $("#antti").val();
-	
-	//Jos nappulan arvo on "antti", tiedot on piilossa ja klikkaamalla tiedot tulevat näkyville.
-	if (currentvalue == "antti"){
-	
-		//Piilotetaan kaikkien henkilöiden yhteystiedot
-		$('#hlö').hide();
-		//Annetaan muille nappuloille niiden oletusarvot
-		$('#ilari').val("ilari");
-		$('#arttu').val("arttu");
-		$('#teemu').val("teemu");
-		//Vieritetään alas Antin yhteystiedot
-		$('.antti').slideDown(500);
-		//Nappulan arvoksi annetaan "pakkanen"
-		$('#antti').val("pakkanen");
-	}
-	
-	//Jos nappulaa painetaan uudestaan, nappulan arvon ollessa "pakkanen", tiedot menevät piiloon
-	else if (currentvalue == "pakkanen"){
-	//Vieritetään ylös Antin yhteystiedot
-		$('.antti').slideUp(500);
-		//Nappulan arvoksi annetaan "antti"
-		$('#antti').val("antti");
-	}
+
+		//Laitetaan Antin yhteystieto -nappulan arvo muuttujaan currentvalue
+		var currentvalue = $("#antti").val();
+
+		//Jos nappulan arvo on "antti", tiedot on piilossa ja klikkaamalla tiedot tulevat näkyville.
+		if (currentvalue == "antti"){
+
+			//Piilotetaan kaikkien henkilöiden yhteystiedot
+			$('#hlö').hide();
+			//Annetaan muille nappuloille niiden oletusarvot
+			$('#ilari').val("ilari");
+			$('#arttu').val("arttu");
+			$('#teemu').val("teemu");
+			//Vieritetään alas Antin yhteystiedot
+			$('.antti').slideDown(500);
+			//Nappulan arvoksi annetaan "pakkanen"
+			$('#antti').val("pakkanen");
+		}
+
+		//Jos nappulaa painetaan uudestaan, nappulan arvon ollessa "pakkanen", tiedot menevät piiloon
+		else if (currentvalue == "pakkanen"){
+		//Vieritetään ylös Antin yhteystiedot
+			$('.antti').slideUp(500);
+			//Nappulan arvoksi annetaan "antti"
+			$('#antti').val("antti");
+		}
 	}); //click
-	
+
 	//Klikataan Artun nappia
-		$('#arttu').click(function () {
-	
-	//Laitetaan Artun yhteystieto -nappulan arvo muuttujaan currentvalue
-	var currentvalue = $("#arttu").val();
-	
-//Jos nappulan arvo on "arttu", tiedot on piilossa ja klikkaamalla tiedot tulevat näkyville.	
-	if (currentvalue == "arttu"){
-	
-		//Piilotetaan kaikkien henkilöiden yhteystiedot
-		$('#hlö').hide();
-		//Annetaan muille nappuloille niiden oletusarvot
-		$('#ilari').val("ilari");
-		$('#antti').val("antti");
-		$('#teemu').val("teemu");
-		//Vieritetään alas Artun yhteystiedot
-		$('.arttu').slideDown(500);
-		//Nappulan arvoksi annetaan "seppal"
-		$('#arttu').val("seppal");
-	}
-	//Jos nappulaa painetaan uudestaan, nappulan arvon ollessa "seppal", tiedot menevät piiloon
-	else if (currentvalue == "seppal"){
-	//Vieritetään ylös Artun yhteystiedot
-		$('.arttu').slideUp(500);
-	//Nappulan arvoksi annetaan "arttu"
-		$('#arttu').val("arttu");
-	}
+	$('#arttu').click(function () {
+
+		//Laitetaan Artun yhteystieto -nappulan arvo muuttujaan currentvalue
+		var currentvalue = $("#arttu").val();
+
+	//Jos nappulan arvo on "arttu", tiedot on piilossa ja klikkaamalla tiedot tulevat näkyville.
+		if (currentvalue == "arttu"){
+
+			//Piilotetaan kaikkien henkilöiden yhteystiedot
+			$('#hlö').hide();
+			//Annetaan muille nappuloille niiden oletusarvot
+			$('#ilari').val("ilari");
+			$('#antti').val("antti");
+			$('#teemu').val("teemu");
+			//Vieritetään alas Artun yhteystiedot
+			$('.arttu').slideDown(500);
+			//Nappulan arvoksi annetaan "seppal"
+			$('#arttu').val("seppal");
+		}
+		//Jos nappulaa painetaan uudestaan, nappulan arvon ollessa "seppal", tiedot menevät piiloon
+		else if (currentvalue == "seppal"){
+		//Vieritetään ylös Artun yhteystiedot
+			$('.arttu').slideUp(500);
+		//Nappulan arvoksi annetaan "arttu"
+			$('#arttu').val("arttu");
+		}
 	}); //click
-	
+
 	//Klikataan Ilarin nappia
-		$('#ilari').click(function () {
-	
-	//Laitetaan Ilarin yhteystieto -nappulan arvo muuttujaan currentvalue
-	var currentvalue = $("#ilari").val();
-	
-	
-	//Jos nappulan arvo on "ilari", tiedot on piilossa ja klikkaamalla tiedot tulevat näkyville.
-	if (currentvalue == "ilari"){
-	
-		//Piilotetaan kaikkien henkilöiden yhteystiedot
-		$('#hlö').hide();
-		
-		//Annetaan muille nappuloille niiden oletusarvot
-		$('#antti').val("antti");
-		$('#arttu').val("arttu");
-		$('#teemu').val("teemu");
-		//Vieritetään alas Ilarin yhteystiedot
-		$('.ilari').slideDown(500);
-		//Nappulan arvoksi annetaan "nikander"
-		$('#ilari').val("nikander");
-	}
-	//Jos nappulaa painetaan uudestaan, nappulan arvon ollessa "nikander", tiedot menevät piiloon
-	else if (currentvalue == "nikander"){
-	//Vieritetään ylös Ilarin yhteystiedot
-		$('.ilari').slideUp(500);
-	//Nappulan arvoksi annetaan "ilari"
-		$('#ilari').val("ilari");
-	}
-	}); //click
-	}); //Luodaan animaatiot loppuu
-	
+	$('#ilari').click(function () {
 
+		//Laitetaan Ilarin yhteystieto -nappulan arvo muuttujaan currentvalue
+		var currentvalue = $("#ilari").val();
 
- //ready loppuu
+		//Jos nappulan arvo on "ilari", tiedot on piilossa ja klikkaamalla tiedot tulevat näkyville.
+		if (currentvalue == "ilari"){
+
+			//Piilotetaan kaikkien henkilöiden yhteystiedot
+			$('#hlö').hide();
+
+			//Annetaan muille nappuloille niiden oletusarvot
+			$('#antti').val("antti");
+			$('#arttu').val("arttu");
+			$('#teemu').val("teemu");
+			//Vieritetään alas Ilarin yhteystiedot
+			$('.ilari').slideDown(500);
+			//Nappulan arvoksi annetaan "nikander"
+			$('#ilari').val("nikander");
+		}
+		//Jos nappulaa painetaan uudestaan, nappulan arvon ollessa "nikander", tiedot menevät piiloon
+		else if (currentvalue == "nikander"){
+		//Vieritetään ylös Ilarin yhteystiedot
+			$('.ilari').slideUp(500);
+		//Nappulan arvoksi annetaan "ilari"
+			$('#ilari').val("ilari");
+		}
+		}); //click
+	}); //Luodaan animaatiot loppuu, ready loppuu
 
 //Määritellään reititys
 yTiedot.config(function ($routeProvider) {
@@ -183,7 +178,7 @@ yTiedot.controller('LoginView', function($scope, $location, $rootScope) {
 			$rootScope.loggedIn = true;
 			//Muutetaan polku admin-paneeliin
       window.location.href= "./admin-panel.html"
-		} else {			
+		} else {
 			//Jos tunnus tai salasana on väärin, annetaan virhe dialogi
 			$( function (){
         $("#errordialog").dialog({
@@ -194,8 +189,6 @@ yTiedot.controller('LoginView', function($scope, $location, $rootScope) {
           modal: true
         }); // dialog
       }); // anonyymi funktio
-
 		} // else
-
 	}; // submit
 }); //Controller loppuu

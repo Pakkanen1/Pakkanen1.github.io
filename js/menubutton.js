@@ -22,14 +22,14 @@ window.onclick = function(event) {
 //Oikean yläreunan kirjautumisruutu
 $(document).ready(function(){
 	$("#loginButton").click(function(){
-//Katsotaan onko nappulassa teksti "Kirjaudu" vai "Piiloita"		
+//Katsotaan onko nappulassa teksti "Kirjaudu" vai "Piiloita"
 	var currentvalue = $("#loginButton").val();
 
 //Jos nappulassa on teksti "Kirjaudu", login ikkuna slaidaa alas ja nappulan tekstiksi tulee "Piiloita"
 	if (currentvalue == "Kirjaudu") {
 		$("#loginButton").val("Piiloita");
         $("#login-window").slideDown();
-		
+
 //Jos nappulassa on teksti "Piiloita", login ikkuna slaidaa ylös ja nappulan tekstiksi tulee "Kirjaudu"
 	} else if (currentvalue == "Piiloita") {
 		$("#loginButton").val("Kirjaudu");
