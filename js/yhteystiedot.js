@@ -183,9 +183,19 @@ yTiedot.controller('LoginView', function($scope, $location, $rootScope) {
 			$rootScope.loggedIn = true;
 			//Muutetaan polku admin-paneeliin
       window.location.href= "./admin-panel.html"
-		} else {
-			
-			
-		} //else
+		} else {			
+			//Jos tunnus tai salasana on väärin, annetaan virhe dialogi
+			$( function (){
+        $("#errordialog").dialog({
+          resizable: false,
+          height: "auto",
+          width: 300,
+          // Himmennetään loppunäyttö
+          modal: true
+        }); // dialog
+      }); // anonyymi funktio
+
+		} // else
+
 	}; // submit
 }); //Controller loppuu
