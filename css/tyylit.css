@@ -220,6 +220,7 @@ input#search {
 }
 
 .repeatedthumbnail img {
+  margin: 3px;
   width: 150px;
   height: 150px;
 }
