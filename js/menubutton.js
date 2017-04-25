@@ -1,10 +1,10 @@
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+//Vasemman yläreunan navigaatio pudotusvalikko
+//Kun käyttäjä klikkaa nappulaa, vaihdellaan valikon näkymisen ja piiloutumisen välillä
 function menuFunction() {
     document.getElementById("menuDropdown").classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
+//Suljetaan menu jos käyttäjä klikkaa sen ulkopuolelle.
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
 
@@ -19,17 +19,21 @@ window.onclick = function(event) {
   }
 }
 
+//Oikean yläreunan kirjautumisruutu
 $(document).ready(function(){
 	$("#loginButton").click(function(){
-
+//Katsotaan onko nappulassa teksti "Kirjaudu" vai "Piiloita"
 	var currentvalue = $("#loginButton").val();
 
+//Jos nappulassa on teksti "Kirjaudu", login ikkuna slaidaa alas ja nappulan tekstiksi tulee "Piiloita"
 	if (currentvalue == "Kirjaudu") {
-    		$("#loginButton").val("Piiloita");
-        $("#login-window").stop().slideDown();
+		$("#loginButton").val("Piiloita");
+        $("#login-window").slideDown();
+
+//Jos nappulassa on teksti "Piiloita", login ikkuna slaidaa ylös ja nappulan tekstiksi tulee "Kirjaudu"
 	} else if (currentvalue == "Piiloita") {
-		    $("#loginButton").val("Kirjaudu");
-        $("#login-window").stop().slideUp();
+		$("#loginButton").val("Kirjaudu");
+        $("#login-window").slideUp();
    }
  });
 });

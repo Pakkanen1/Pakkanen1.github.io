@@ -57,7 +57,7 @@ if ($uploadOk == 0) {
         $img_id = $final_line - 1;
         $img_filename = basename( $_FILES["fileToUpload"]["name"]);
         $img_description = $_POST['fileDescription'];
-        $img_source = "http://localhost/apakka/Pakkanen1.github.io/images/" . basename( $_FILES["fileToUpload"]["name"]);
+        $img_source = "http://localhost/ap/Pakkanen1.github.io/images/" . basename( $_FILES["fileToUpload"]["name"]);
 
         // Käännetään JSON-string ja asetetaan se muuttujaan
         $json = json_decode(file_get_contents($file), true);

@@ -165,7 +165,6 @@ mainApp.controller('LoginView', function($scope, $location, $rootScope) {
           modal: true
         }); // dialog
       }); // anonyymi funktio
-
 		} //else
 	}; // submit
 }); //Controller loppuu

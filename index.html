@@ -15,8 +15,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
 
     <script type="text/javascript" src="js/imageappender.js"></script>
-		<script src="js/search-engine.js"></script>
-		<script src="js/admin-login.js"></script>
 		<script src="js/menubutton.js"></script>
 
   <title>Vulkanuksen Kuvagalleria</title>
@@ -42,7 +40,7 @@
 
 		<div id="searchInput">
 			<h1>Kuvahaku</h1>
-			<input id="search" ng-model="query.description" placeholder="Etsi kuvia">
+			<input id="search" ng-model="query" placeholder="Etsi kuvia">
 		</div>
 
 			<input type="button" value="Sulje Esikatselu" id="imagehidebtn" ng-click="closeImage()"/>
@@ -55,7 +53,7 @@
 	        <ul id="thumbnail-list" ng-show="query">
 						<!--Klikatessa thumbnailia ajetaan setCurrentImage() @ imageappender.js
 								ng-repeat toistaa <li>-elementin jokaiselle kuvalle images-taulukossa -->
-	            <li class="repeatedthumbnail" ng-repeat="image in images | filter:query" ng-click="setCurrentImage(image)">
+	            <li class="repeatedthumbnail" ng-repeat="image in images | filter:{description:query}" ng-click="setCurrentImage(image)">
 	                <img ng-src="{{image.image}}" alt="{{image.description}}" />
 	            </li>
 	        </ul>
